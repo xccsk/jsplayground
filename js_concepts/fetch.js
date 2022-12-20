@@ -5,7 +5,7 @@ btn.addEventListener("click", getDatafromUrl());
 const api_data = {};
 
 function getDatafromUrl() {
-  fetch("https://randomuser.me/api/?results=5000")
+  fetch("https://randomuser.me/api/?results=2")
     .then(function (res) {
       return res.json();
     })
