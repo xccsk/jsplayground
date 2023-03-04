@@ -15,7 +15,7 @@ for (const key in object) {
   console.log(key, object[key]);
 }
 
-/* For of loops for arrys (used to iterare threw values of objects) */
+/* For of loops for arrys (used to iterare threw values of array) */
 
 const array = [1, 2, 3, 4, 5];
 
