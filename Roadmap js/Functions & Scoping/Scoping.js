@@ -28,7 +28,7 @@ basilly every time you have {} your creating a block scope and you can use varib
 /*
 function scoping
 
-when you use the keyword var to define a varibale, you can use this in the hole function no matter how deep block nesting there is but onlay with var. let and const are blocked level scoped
+when you use the keyword var to define a varibale, you can use this in the hole function no matter how deep its nasted you can use it after the hole nesting block but in the same function. let and const are blocked level scoped
 
 */
 
