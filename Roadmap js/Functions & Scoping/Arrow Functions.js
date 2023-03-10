@@ -35,7 +35,7 @@ document.addEventListener("click", ()=>{console.log()})
 
 //2. Diffrence between this in Arrow and normal functions
 
-/*when using this ina normal function it looks on the scope from where the function is call.
+/*when using "this" ina normal function it looks on the scope from where the function is call.
 
-When using arrow functions it looks up the ths keyword from where its defined
+When using arrow functions it looks up the "this" keyword from where its defined (global scope)
 */

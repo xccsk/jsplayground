@@ -22,7 +22,7 @@ function addition(){
     return 14+11
 }
 
-//in this code wont be an error, cause its gonne hoist the funcionnaddtion up if submit and addtion where turned there would be an error
+//in this code wont be an error, cause its gonne hoist the funcionn addtion up if submit and addtion where turned there would be an error
 
 
 //var example
