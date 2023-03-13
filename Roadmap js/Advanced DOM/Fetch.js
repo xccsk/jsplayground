@@ -19,6 +19,8 @@ fetch("https://randomuser.me/api/?results=10", { method: "GET" })
 
 //object passed to fetch 
 
+
+/*
 {
     method:"POST" //wich method of request to the backend (POST,PUT,GET,DELETE)
     headers:{ //you need to set a header
@@ -28,6 +30,8 @@ fetch("https://randomuser.me/api/?results=10", { method: "GET" })
         name:"walter white"
     })
 }
+*/
+
 
 //Chat GBT
 
