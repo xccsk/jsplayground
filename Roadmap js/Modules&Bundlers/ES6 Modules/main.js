@@ -1,0 +1,1 @@
+import { printAge,printNumber } from "./user";
