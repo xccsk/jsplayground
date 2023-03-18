@@ -48,3 +48,51 @@ Note that when merging objects, if there are properties with the same name, the 
 
 The spread operator is a powerful and versatile feature in JavaScript that simplifies working with iterables and helps you write cleaner, more concise code.
 */
+
+//Rest operator 
+
+/*
+The rest operator (...) in JavaScript is similar in syntax to the spread operator but serves a different purpose. While the spread operator is used to expand elements of an iterable, the rest operator is used to collect multiple elements into a single array. The rest operator is often used in function parameters to collect a varying number of arguments into an array.
+*/
+
+//Collecting function arguments into an array:
+
+function sum(...numbers) {
+    let total = 0;
+    for (const number of numbers) {
+      total += number;
+    }
+    return total;
+  }
+  
+  console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+
+/*In this example, the ...numbers parameter collects all the arguments passed to the sum function into a single array called numbers.*/
+
+//Destructuring arrays:
+
+const [first, second, ...remaining] = [1, 2, 3, 4, 5];
+
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(remaining); // Output: [3, 4, 5]
+
+/*
+In this example, the rest operator is used to collect the remaining elements of the array into a new array called remaining.
+*/
+
+//Destructuring objects:
+
+const { a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+
+console.log(a); // Output: 1
+console.log(b); // Output: 2
+console.log(rest); // Output: { c: 3, d: 4, e: 5 }
+
+/*
+In this example, the rest operator is used to collect the remaining properties of the object into a new object called rest.
+
+Keep in mind that the rest operator should always be used as the last element in a parameter list, destructuring array, or destructuring object. Otherwise, you'll get a syntax error.
+
+The rest operator is a powerful and flexible feature in JavaScript that allows you to work with an arbitrary number of elements or properties in a concise and efficient way.
+*/
