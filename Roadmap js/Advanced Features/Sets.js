@@ -1,46 +1,49 @@
-//Symbols
+//Sets in JS
 
 /*
-Symbols are a unique and immutable primitive data type introduced in ECMAScript 2015 (ES6). They are mainly used as identifiers for object properties, providing a way to create non-enumerable and non-clashing property keys that don't interfere with other properties in the object.
+Sets in JavaScript are a built-in collection data type introduced in ECMAScript 2015 (ES6). A Set is an ordered collection of unique values, where each value can only occur once. Sets are useful when you want to store a collection of distinct values without duplicates, and they provide several built-in methods for easy manipulation.
+
+Here are some key features and benefits of using Sets in JavaScript:
+
+Unique values: Sets only store unique values, automatically removing duplicates when you add new values.
+Any data type as a value: Sets allow you to store any data type, including primitive values and objects.
+Preserved insertion order: Sets maintain the order of values based on the order they were inserted, making it easy to iterate over them in a predictable manner.
+Size property: Sets have a built-in size property that indicates the number of values in the collection, making it easy to determine the Set's size.
+Useful methods: Sets provide several built-in methods for easy manipulation of values, such as add, has, delete, and clear.
+Here's an example of how to create and use a Set in JavaScript:
 */
-/*
-Symbols can be created using the Symbol() function. When called, this function returns a new unique symbol value. You can optionally provide a description as an argument, but this description is only used for debugging purposes and does not affect the uniqueness of the symbol.
+// Create a new Set
+const mySet = new Set();
 
-Here's an example of creating a symbol:
-*/
-const symbol1 = Symbol();
-const symbol2 = Symbol("my description");
-const symbol3 = Symbol("my description");
+// Add values to the Set
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+mySet.add(2); // Duplicate value, won't be added
 
-console.log(typeof symbol1); // Output: 'symbol'
-console.log(symbol2 === symbol3); // Output: false
+console.log(mySet.size); // Output: 3
 
-/*
-In this example, we create three symbols. symbol2 and symbol3 have the same description, but they are still distinct and unique symbol values.
+// Check if a value exists in the Set
+console.log(mySet.has(1)); // Output: true
+console.log(mySet.has(4)); // Output: false
 
-One of the main use cases for symbols is to create non-enumerable, non-clashing property keys for objects. This can be useful to prevent accidental modifications or conflicts with other code that may use the same object.
+// Delete a value from the Set
+mySet.delete(3);
+console.log(mySet.size); // Output: 2
 
-Here's an example of using symbols as property keys:
-*/
-const mySymbol = Symbol("mySymbol");
-const myObject = {
-  [mySymbol]: "Symbol value",
-  regularKey: "Regular value",
-};
+// Clear the Set
+mySet.clear();
+console.log(mySet.size); // Output: 0
 
-console.log(myObject[mySymbol]); // Output: 'Symbol value'
-console.log(myObject.regularKey); // Output: 'Regular value'
-
-for (const key in myObject) {
-  console.log(key); // Output: 'regularKey' (the symbol key is not enumerated)
+// Iterate over a Set
+for (const value of mySet) {
+  console.log(value);
 }
 
-console.log(JSON.stringify(myObject)); // Output: '{"regularKey":"Regular value"}' (the symbol key is not included)
+// Create a Set with initial values
+const anotherSet = new Set([1, 2, 3, 4, 4, 5]);
+console.log(anotherSet.size); // Output: 5 (duplicate value '4' is removed)
 
 /*
-In this example, we create an object with two properties: one using a symbol key and another using a regular string key. When iterating over the object with a for...in loop or converting the object to JSON using JSON.stringify(), the symbol property is not included, making it non-enumerable.
-
-Symbols also have a global registry called the "Symbol Registry", which can be accessed using the Symbol.for() and Symbol.keyFor() methods. This allows you to create and retrieve symbols that are shared across different parts of your application.
-
-In summary, symbols in JavaScript are a unique and immutable primitive data type used primarily as identifiers for object properties. They provide a way to create non-enumerable and non-clashing property keys, which can help prevent accidental modifications and conflicts in your code.
+In summary, Sets in JavaScript are a built-in collection data type that allows you to store and manage unique values without duplicates. Sets provide useful methods and properties for easy manipulation and iteration, making them a powerful tool for handling collections of distinct data in your applications.
 */
